@@ -7,10 +7,11 @@
 }
 
 body {
-    background: #000;
-    color: #0002,;
+    margin: 0;
+    padding: 0;
+    background: url("../img/fundo2.png") no-repeat center center fixed;
+    background-size: cover;
 }
-
 /* HEADER */
 .topo {
     width: 100%;
