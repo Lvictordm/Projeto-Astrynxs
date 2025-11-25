@@ -133,24 +133,60 @@ body {
     line-height: 1.6;
 }
 
-/* RODAPÉ */
-footer {
-    margin-top: 70px;
-    padding: 40px 0;
-    text-align: center;
-    color: #aaa;
-    font-size: 14px;
-    border-top: 1px solid rgba(255,255,255,0.07);
+/* BOTÕES ABAIXO DOS CARDS - ALINHADOS */
+.buttons {
+    display: flex;
+    /* justify-content: center;  <-- Removido para permitir alinhamento mais sutil */
+    justify-content: space-around; /* Nova propriedade para distribuir o espaço e alinhar com os cards */
+    gap: 28px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    /* Adicionamos um 'max-width' aqui para restringir o contêiner dos botões 
+       à largura máxima dos três cards acima, forçando o alinhamento central
+       dentro do 'wrap', mas com os botões distribuídos. 
+       A largura de 940px é uma estimativa baseada em três cards de aprox. 280px + 2*28px de gap.
+    */
+    max-width: 940px; 
+    margin-left: auto; /* Centraliza o contêiner 'buttons' */
+    margin-right: auto; /* Centraliza o contêiner 'buttons' */
+}
+
+.botao {
+    display: inline-block;
+    padding: 16px 35px; /* Reduzimos o padding horizontal (de 50px para 35px) */
+    background: linear-gradient(90deg, #a34bff, #8b3dff);
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 25px #9a47ff55;
+    transition: .3s;
+    text-decoration: none;
+    /* min-width: 250px; <-- Removido para deixar o tamanho proporcional ao texto */
+}
+
+.botao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px #b46cffaa;
 }
 
 /* RESPONSIVO */
 @media (max-width: 980px) {
-    .card { width: 280px; min-height: 300px; }
+    /* Em telas menores, se o 'max-width: 940px' for atingido, a centralização 
+       pode precisar ser reforçada, mas mantemos o ajuste de largura.
+    */
+    .buttons { 
+        max-width: 100%; /* Permite ocupar a largura total do 'wrap' novamente */
+        justify-content: center; /* Volta a centralizar os botões */
+    }
+    .botao { min-width: 220px; } /* Mantemos o min-width para telas menores */
 }
 
 @media (max-width: 640px) {
-    .wrap { padding-top: 170px; }
-    .cards { gap: 16px; }
-    .card { width: 100%; max-width: 500px; }
-    .topo { padding: 14px 25px; }
+    .botao {
+        width: 100%;
+        max-width: 500px;
+    }
 }
