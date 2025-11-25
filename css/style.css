@@ -1,6 +1,4 @@
-/* =========================
-   RESET + FONTE
-========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================
-   HEADER
-========================= */
 header {
     width: 100%;
     padding: 20px 60px;
@@ -41,7 +36,7 @@ header {
     transform: scale(1.05);
 }
 
-/* MENU */
+
 nav a {
     margin: 0 16px;
     color: #d7a6ff;
@@ -57,9 +52,7 @@ nav a:hover {
     transform: scale(1.12);
 }
 
-/* =========================
-   TÍTULO
-========================= */
+
 h1 {
     text-align: center;
     margin-top: 60px;
@@ -76,9 +69,6 @@ h1 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* =========================
-   ÍCONE CENTRAL
-========================= */
 .star-center {
     width: 170px;
     margin: 40px auto;
@@ -93,9 +83,7 @@ h1 {
     100% { transform: scale(1); }
 }
 
-/* =========================
-   ÁREA DE CONTATOS
-========================= */
+
 .contatos-container {
     margin-top: 40px;
     padding: 40px 0;
@@ -131,9 +119,7 @@ h1 {
     filter: drop-shadow(0 0 6px #b152ff);
 }
 
-/* =========================
-   TEXTO FINAL
-========================= */
+
 .footer-info {
     text-align: center;
     margin: 35px 0 60px;
@@ -142,9 +128,7 @@ h1 {
     text-shadow: 0 0 10px #a24bff55;
 }
 
-/* =========================
-   RODAPÉ
-========================= */
+
 footer {
     background: #0a0a0a;
     padding: 50px 60px;
@@ -179,7 +163,7 @@ footer a:hover {
     text-shadow: 0 0 12px #c66cff;
 }
 
-/* Redes sociais */
+
 .social img {
     width: 32px;
     margin-right: 12px;
@@ -192,7 +176,7 @@ footer a:hover {
     transform: scale(1.15);
 }
 
-/* Input Newsletter */
+
 .newsletter-input {
     padding: 12px;
     border-radius: 10px;
@@ -208,7 +192,7 @@ footer a:hover {
     box-shadow: 0 0 18px #b152ff;
 }
 
-/* COPYRIGHT */
+
 footer .copy {
     width: 100%;
     text-align: center;
