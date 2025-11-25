@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, #1d1d1d, #0f0f0f);
+    background: linear-gradient(90deg, #a7a6a6, #0f0f0f);
     border-bottom: 1px solid #2d2d2d;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
@@ -30,18 +30,18 @@ body {
 
 /* MENU */
 .menu a {
-    margin: 0 18px;
+    margin: 0 16px;
     color: #d38bff;
     text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1.3px;
-    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
     transition: 0.3s ease;
+    display: inline-block; 
 }
 
 .menu a:hover {
-    color: #f0b6ff;
-    text-shadow: 0 0 8px #d38bff;
+    transform: scale(1.15); /* zoom */
+    color: #e7b2ff;   
 }
 
 .icon-search {
@@ -124,8 +124,8 @@ h1 {
 /* IMAGEM HERO */
 .hero {
     display: flex;
-    align-items: center; /* centraliza verticalmente */
-    padding: 120px 60px; /* dá mais respiro */
+    align-items: center; 
+    padding: 120px 60px; 
 }
 .imagem img {
     width: 100%;
