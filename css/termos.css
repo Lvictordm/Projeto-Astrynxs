@@ -1,0 +1,82 @@
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: radial-gradient(circle at top, #16002e, #050008 70%);
+    color: #e6e6e6;
+    line-height: 1.8;
+}
+
+/* ===== HEADER ===== */
+header {
+    width: 100%;
+    padding: 22px 40px;
+    background: rgba(15, 0, 30, 0.65);
+    border-bottom: 2px solid #6a2cff;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(12px);
+}
+
+.logo img {
+    height: 55px;
+    filter: drop-shadow(0 0 10px #8b55ff);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 950px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(30, 10, 55, 0.55);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(140, 80, 255, 0.35);
+    border: 1px solid rgba(140, 80, 255, 0.35);
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ===== TITLES ===== */
+h1 {
+    color: #d9c2ff;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #c39bff;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+/* ===== TEXT ===== */
+p, li {
+    color: #ececec;
+    font-size: 17px;
+}
+
+ul {
+    margin-left: 25px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 60px;
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #3a1a70;
+    background: rgba(10, 0, 25, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.copy {
+    color: #a38fbd;
+    font-size: 15px;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}

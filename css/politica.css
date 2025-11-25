@@ -1,0 +1,120 @@
+/* ======= ESTILO GLOBAL ======= */
+body {
+    margin: 0;
+    padding: 0;
+    /* Certifique-se de que a fonte 'Poppins' está linkada ou substitua por outra fonte padrão se necessário */
+    font-family: "Poppins", Arial, sans-serif; 
+    /* Degradê radial escuro com tons de roxo */
+    background: radial-gradient(circle at top, #15002b, #050008 70%); 
+    color: #e5e5e5;
+    line-height: 1.8;
+}
+
+/* ======= HEADER ======= */
+header {
+    width: 100%;
+    padding: 22px 40px;
+    background: rgba(10, 0, 30, 0.7); /* Fundo semi-transparente escuro */
+    border-bottom: 2px solid #5b2cff; /* Linha inferior roxa */
+    backdrop-filter: blur(12px); /* Efeito de desfoque */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    height: 55px;
+    filter: drop-shadow(0 0 8px #7c3dff); /* Sombra roxa no logo */
+}
+
+/* ======= CONTAINER ======= */
+.container {
+    max-width: 950px;
+    margin: 60px auto;
+    padding: 35px;
+    background: rgba(20, 10, 40, 0.55); /* Fundo semi-transparente escuro mais claro */
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(120, 60, 255, 0.35); /* Sombra externa roxa */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(120, 60, 255, 0.4); /* Borda roxa sutil */
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ======= TÍTULOS ======= */
+h1 {
+    color: #d3b4ff; /* Roxo bem claro */
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #b78cff; /* Roxo médio */
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+/* ======= TEXTOS ======= */
+p, li {
+    color: #eee;
+    font-size: 17px;
+}
+
+/* ======= LINKS ======= */
+a {
+    color: #c9a0ff; /* Cor de link roxa */
+    text-decoration: none;
+}
+a:hover {
+    text-shadow: 0 0 10px #b577ff; /* Efeito de brilho ao passar o mouse */
+}
+
+/* ======= LISTAS ======= */
+ul {
+    margin-left: 20px;
+}
+
+/* ======= RODAPÉ ======= */
+footer {
+    margin-top: 60px;
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #402070;
+    background: rgba(5, 0, 20, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.copy {
+    color: #9d8abc; /* Roxo/cinza sutil */
+    font-size: 15px;
+}
+
+/* ======= ANIMAÇÃO ======= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsividade (Opcional, mas recomendado) --- */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        justify-content: center;
+    }
+    
+    .container {
+        margin: 30px 15px;
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    p, li {
+        font-size: 16px;
+    }
+}
