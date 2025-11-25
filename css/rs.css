@@ -273,4 +273,18 @@ footer {
     object-fit: cover;
 }
 
+.img-bg {
+    background: linear-gradient(180deg, #4b1c93, #000000); /* mesmo estilo roxo do site */
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-bg img {
+    width: 100px;
+    max-width: 600px;
+    object-fit: contain;
+}
 
