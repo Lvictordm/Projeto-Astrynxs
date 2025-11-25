@@ -1,211 +1,230 @@
-/* ===========================
-   RESET + FONTE
-=========================== */
+/* Variáveis para cores */
+:root {
+    --color-dark-bg: #100b17; /* Fundo escuro da base.PNG */
+    --color-card-bg: #2a1f3c; /* Fundo dos cards (roxo escuro com transparência) */
+    --color-primary: #59477a; /* Cor primária (roxo) para destaque */
+    --color-text-light: #f4f4f9; /* Texto claro */
+    --color-text-fade: #a7a7a7; /* Texto levemente apagado */
+    --color-blue: #007bff; /* Cor do botão original */
+    --color-icon-bg: #8c76b1; /* Fundo do ícone/Destaque */
+    --color-card-border: #8c76b1; /* Borda ou destaque do card */
+}
+
+/* Reset básico e tipografia */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* ===========================
-   BODY
-=========================== */
 body {
-    background: #000;
-    color: #e2e2e2;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
     line-height: 1.6;
 }
 
-/* ===========================
-   HEADER / TOPO
-=========================== */
-.topo {
-    width: 100%;
-    padding: 20px 60px;
+/* --- Cabeçalho (Header) --- */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, #a7a6a6, #0f0f0f);
-    border-bottom: 1px solid #2d2d2d;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    padding: 15px 5%;
+    background-color: transparent; /* Fundo transparente */
+    position: relative;
+    z-index: 10;
 }
 
-.logo img {
-    height: 10px;
-    filter: drop-shadow(0 0 10px #a043ff);
+.logo-text {
+    font-size: 1px;
+    font-weight: 70;
+    color: var(--color-text-light);
 }
 
-/* MENU */
-.menu a {
-    margin: 0 16px;
-    color: #d38bff;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
-    display: inline-block;
-}
-
-.menu a:hover {
-    transform: scale(1.15);
-    color: #e7b2ff;
-}
-
-.icon-search {
-    margin-left: 20px;
-    font-size: 20px;
-    color: #d38bff;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.icon-search:hover {
-    transform: scale(1.2);
-}
-
-/* ===========================
-   HERO SECTION
-=========================== */
-.hero {
+.nav ul {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 120px 60px;
-    flex-wrap: wrap;
-    margin-top: 40px;
 }
 
-.texto {
-    max-width: 650px;
+.nav ul li {
+    margin-left: 30px;
 }
 
-h1 {
-    font-size: 58px;
-    font-weight: 700;
-    color: #d9c4ff;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-    text-shadow: 0 0 10px rgba(159, 73, 255, 0.4);
-}
-
-.subtitulo {
-    font-size: 23px;
-    margin-bottom: 28px;
-    color: #cccccc;
-}
-
-.descricao,
-.texto p {
-    font-size: 17px;
-    color: #b5b5b5;
-    margin-bottom: 18px;
-}
-
-/* BOTÃO */
-.botao {
-    display: inline-block;
-    padding: 16px 50px;
-    background: linear-gradient(90deg, #a34bff, #8b3dff);
-    border-radius: 50px;
-    font-size: 15px;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 1px;
-    box-shadow: 0 0 25px #9a47ff55;
-    transition: .3s;
-}
-
-.botao:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 35px #b46cffaa;
-}
-
-/* IMAGEM HERO */
-.imagem img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 0 25px #b350ff);
-    transition: 0.6s ease;
-}
-
-.imagem img:hover {
-    transform: scale(1.05);
-}
-
-/* ===========================
-   SESSÃO "COMO FUNCIONA"
-=========================== */
-
-section {
-    text-align: center;
-    padding: 40px 0;
-}
-
-section h2 {
-    font-size: 30px;
-    color: #9b1fff;
-    margin-bottom: 20px;
-}
-
-/* CARDS */
-.card-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card {
-    background-color: #1a1a1a;
-    border-radius: 12px;
-    padding: 30px;
-    width: 28%;
-    min-width: 280px;
-    box-shadow: 0 0 20px rgba(159, 73, 255, 0.15);
-    text-align: center;
-    transition: 0.3s ease;
-    border: 1px solid #3b3b3b;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(159, 73, 255, 0.35);
-}
-
-.card .icon {
-    font-size: 55px;
-    color: #b35aff;
-    margin-bottom: 20px;
-}
-
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-    color: #e8d7ff;
-}
-
-.card p {
-    font-size: 15px;
-    color: #c7c7c7;
-}
-
-/* ===========================
-   NAV (caso necessário no rodapé)
-=========================== */
-nav {
-    background-color: #111;
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: #fff;
+.nav ul li a {
     text-decoration: none;
-    margin: 0 20px;
+    color: var(--color-text-light);
+    font-weight: 400;
     font-size: 16px;
+    transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #9b1fff;
+.nav ul li a:hover {
+    color: var(--color-primary);
+}
+
+/* --- Seção "Como funciona?" --- */
+.how-it-works-section {
+    position: relative;
+    padding: 100px 5% 50px;
+    text-align: center;
+    overflow: hidden; /* Para garantir que o background não vaze */
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5; /* Garante que o conteúdo fique acima do shape de fundo */
+}
+
+/* O 'Shape' de fundo curvo e claro (inspirado na imagem 1, mas escurecido) */
+.background-shape {
+    position: absolute;
+    top: -20px; /* Ajustar conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%; /* Faz o shape ser mais largo que o container */
+    height: 600px; /* Altura do shape */
+    background: radial-gradient(circle at center top, rgba(140, 118, 177, 0.2) 0%, rgba(16, 11, 23, 0) 70%); 
+    border-radius: 0 0 50% 50%; /* Faz a curva para baixo */
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.text-header {
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.crm-title {
+    color: var(--color-primary);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.main-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--color-text-fade);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Cards de Recursos (Features Grid) --- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-card {
+    background-color: var(--color-card-bg); /* Fundo roxo escuro para o card */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid transparent; /* Inicialmente transparente */
+    transition: border-color 0.3s ease;
+
+    /* Efeito de brilho/borda da base.PNG */
+    box-shadow: 0 0 10px rgba(140, 118, 177, 0.3); 
+    border-image-slice: 1;
+    border-image-source: linear-gradient(135deg, var(--color-card-border), var(--color-dark-bg));
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-primary); /* Títulos em roxo para contraste */
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--color-text-fade);
+    flex-grow: 1; /* Garante que o texto ocupe o espaço */
+}
+
+/* Caixa do Ícone */
+.icon-box {
+    background-color: var(--color-icon-bg); /* Cor de fundo do ícone */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon-box svg {
+    color: var(--color-dark-bg); /* Cor do ícone (preto/muito escuro) */
+    width: 24px;
+    height: 24px;
+}
+
+/* Botão "Saiba mais" */
+.saiba-mais-btn {
+    display: inline-block;
+    background-color: var(--color-blue);
+    color: var(--color-text-light);
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.saiba-mais-btn:hover {
+    background-color: #0056b3;
+}
+
+/* --- Responsividade (Opcional, mas recomendado) --- */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+    .nav ul {
+        margin-top: 10px;
+    }
+    .nav ul li {
+        margin: 0 15px;
+    }
+    .main-title {
+        font-size: 32px;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    .feature-card {
+        text-align: center;
+        align-items: center;
+    }
 }
