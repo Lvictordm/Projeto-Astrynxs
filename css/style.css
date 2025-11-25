@@ -1,0 +1,211 @@
+/* ===========================
+   RESET + FONTE
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===========================
+   BODY
+=========================== */
+body {
+    background: #000;
+    color: #e2e2e2;
+    line-height: 1.6;
+}
+
+/* ===========================
+   HEADER / TOPO
+=========================== */
+.topo {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #a7a6a6, #0f0f0f);
+    border-bottom: 1px solid #2d2d2d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.logo img {
+    height: 10px;
+    filter: drop-shadow(0 0 10px #a043ff);
+}
+
+/* MENU */
+.menu a {
+    margin: 0 16px;
+    color: #d38bff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.menu a:hover {
+    transform: scale(1.15);
+    color: #e7b2ff;
+}
+
+.icon-search {
+    margin-left: 20px;
+    font-size: 20px;
+    color: #d38bff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon-search:hover {
+    transform: scale(1.2);
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 60px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.texto {
+    max-width: 650px;
+}
+
+h1 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #d9c4ff;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(159, 73, 255, 0.4);
+}
+
+.subtitulo {
+    font-size: 23px;
+    margin-bottom: 28px;
+    color: #cccccc;
+}
+
+.descricao,
+.texto p {
+    font-size: 17px;
+    color: #b5b5b5;
+    margin-bottom: 18px;
+}
+
+/* BOTÃO */
+.botao {
+    display: inline-block;
+    padding: 16px 50px;
+    background: linear-gradient(90deg, #a34bff, #8b3dff);
+    border-radius: 50px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 25px #9a47ff55;
+    transition: .3s;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px #b46cffaa;
+}
+
+/* IMAGEM HERO */
+.imagem img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 25px #b350ff);
+    transition: 0.6s ease;
+}
+
+.imagem img:hover {
+    transform: scale(1.05);
+}
+
+/* ===========================
+   SESSÃO "COMO FUNCIONA"
+=========================== */
+
+section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+section h2 {
+    font-size: 30px;
+    color: #9b1fff;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px;
+    width: 28%;
+    min-width: 280px;
+    box-shadow: 0 0 20px rgba(159, 73, 255, 0.15);
+    text-align: center;
+    transition: 0.3s ease;
+    border: 1px solid #3b3b3b;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(159, 73, 255, 0.35);
+}
+
+.card .icon {
+    font-size: 55px;
+    color: #b35aff;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #e8d7ff;
+}
+
+.card p {
+    font-size: 15px;
+    color: #c7c7c7;
+}
+
+/* ===========================
+   NAV (caso necessário no rodapé)
+=========================== */
+nav {
+    background-color: #111;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #9b1fff;
+}
