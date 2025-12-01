@@ -6,10 +6,12 @@
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* BODY */
 body {
-    background: #000;
-    color: #e2e2e2;
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background: url("../img/KAUA.png") no-repeat center center fixed;
+    background-size: cover;
 }
 
 header {
@@ -87,12 +89,14 @@ h1 {
 .contatos-container {
     margin-top: 40px;
     padding: 40px 0;
-    border-top: 3px solid #b152ff;
+    /* linha removida */
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
 }
+
+
 
 .contato-box {
     background: #1a1a1a;

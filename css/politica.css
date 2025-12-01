@@ -1,120 +1,245 @@
-/* ======= ESTILO GLOBAL ======= */
+/* =========================
+   RESET + CONFIGURAÇÕES GERAIS
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
-    /* Certifique-se de que a fonte 'Poppins' está linkada ou substitua por outra fonte padrão se necessário */
-    font-family: "Poppins", Arial, sans-serif; 
-    /* Degradê radial escuro com tons de roxo */
-    background: radial-gradient(circle at top, #15002b, #050008 70%); 
-    color: #e5e5e5;
-    line-height: 1.8;
+    background: url("../img/KAUA.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #000000;
 }
 
-/* ======= HEADER ======= */
-header {
+/* =========================
+   MENU SUPERIOR / HEADER
+   ========================= */
+.topo {
     width: 100%;
-    padding: 22px 40px;
-    background: rgba(10, 0, 30, 0.7); /* Fundo semi-transparente escuro */
-    border-bottom: 2px solid #5b2cff; /* Linha inferior roxa */
-    backdrop-filter: blur(12px); /* Efeito de desfoque */
+    padding: 20px 60px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start;
+    background: linear-gradient(90deg, #a7a6a6, #0f0f0f);
+    /* Linha roxa removida */
+    border-bottom: none;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
 .logo img {
-    height: 55px;
-    filter: drop-shadow(0 0 8px #7c3dff); /* Sombra roxa no logo */
+    height: 70px;
+    filter: drop-shadow(0 0 10px #a043ff);
 }
 
-/* ======= CONTAINER ======= */
-.container {
-    max-width: 950px;
-    margin: 60px auto;
-    padding: 35px;
-    background: rgba(20, 10, 40, 0.55); /* Fundo semi-transparente escuro mais claro */
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(120, 60, 255, 0.35); /* Sombra externa roxa */
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(120, 60, 255, 0.4); /* Borda roxa sutil */
-    animation: fadeIn 0.8s ease-in-out;
+/* MENU */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
 }
 
-/* ======= TÍTULOS ======= */
-h1 {
-    color: #d3b4ff; /* Roxo bem claro */
-    font-size: 38px;
-    margin-bottom: 15px;
-}
-
-h2 {
-    color: #b78cff; /* Roxo médio */
-    margin-top: 30px;
-    font-size: 25px;
-}
-
-/* ======= TEXTOS ======= */
-p, li {
-    color: #eee;
-    font-size: 17px;
-}
-
-/* ======= LINKS ======= */
-a {
-    color: #c9a0ff; /* Cor de link roxa */
+nav ul li a,
+.menu a {
+    color: #d3c1ff;
     text-decoration: none;
-}
-a:hover {
-    text-shadow: 0 0 10px #b577ff; /* Efeito de brilho ao passar o mouse */
+    font-weight: bold;
+    transition: 0.3s ease;
+    letter-spacing: 1px;
 }
 
-/* ======= LISTAS ======= */
-ul {
+nav ul li a:hover,
+.menu a:hover {
+    color: #b56bff;
+    text-shadow: 0 0 8px #b56bff;
+    transform: scale(1.15);
+}
+
+/* Ícone de busca */
+.icon-search {
     margin-left: 20px;
+    font-size: 20px;
+    color: #d38bff;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* ======= RODAPÉ ======= */
-footer {
-    margin-top: 60px;
-    padding: 25px;
+.icon-search:hover {
+    transform: scale(1.2);
+}
+
+/* =========================
+   LINHA DE BRILHO (REMOVIDA)
+   ========================= */
+.linha-brilho {
+    display: none;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 60px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* TEXTOS */
+.texto {
+    max-width: 650px;
+}
+
+h1 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #d9c4ff;
+    text-shadow: 0 0 10px rgba(159, 73, 255, 0.4);
     text-align: center;
-    border-top: 1px solid #402070;
-    background: rgba(5, 0, 20, 0.6);
+    margin-bottom: 25px;
+}
+
+.subtitulo {
+    font-size: 23px;
+    margin-bottom: 28px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.descricao,
+.texto p,
+p,
+li {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #b5b5b5;
+    margin-bottom: 18px;
+}
+
+/* BOTÃO */
+.botao {
+    display: inline-block;
+    padding: 16px 50px;
+    background: linear-gradient(90deg, #a34bff, #8b3dff);
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 25px #9a47ff55;
+    transition: .3s;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px #b46cffaa;
+}
+
+/* IMAGEM HERO */
+.imagem img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 25px #b350ff);
+    transition: 0.6s ease;
+}
+
+.imagem img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   SEÇÃO SERVIÇOS
+   ========================= */
+.servicos {
+    padding: 120px 60px;
+    text-align: center;
+    color: #000000;
+}
+
+.servicos h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #d9c4ff;
+    text-shadow: 0 0 15px #b86fff77;
+    letter-spacing: 1px;
+}
+
+.intro-servicos {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    font-size: 20px;
+    color: #000000;
+    line-height: 1.7;
+    text-shadow: 0 0 8px #000;
+}
+
+/* CARDS */
+.cards-servicos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.card {
+    width: 300px;
+    min-height: 220px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
     backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 35px #b86cffaa;
+}
+
+.card h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #e7cfff;
+    text-shadow: 0 0 10px #a34bff77;
+}
+
+.card p {
+    font-size: 16px;
+    color: #d9c4ffcc;
+    line-height: 1.6;
+}
+
+/* =========================
+   CONTEÚDO PÁGINAS INTERNAS
+   ========================= */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* =========================
+   RODAPÉ
+   ========================= */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    /* linha removida */
+    background: #0b0b0b;
 }
 
 .copy {
-    color: #9d8abc; /* Roxo/cinza sutil */
-    font-size: 15px;
-}
-
-/* ======= ANIMAÇÃO ======= */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- Responsividade (Opcional, mas recomendado) --- */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-        justify-content: center;
-    }
-    
-    .container {
-        margin: 30px 15px;
-        padding: 25px;
-    }
-    
-    h1 {
-        font-size: 30px;
-    }
-    
-    h2 {
-        font-size: 20px;
-    }
-    
-    p, li {
-        font-size: 16px;
-    }
+    color: #b580ff;
+    text-shadow: 0 0 6px #a35aff;
 }
