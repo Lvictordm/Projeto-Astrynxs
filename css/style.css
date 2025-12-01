@@ -6,12 +6,14 @@
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* BODY */
 body {
     margin: 0;
     padding: 0;
     background: url("../img/fundo2.png") no-repeat center center fixed;
     background-size: cover;
 }
+
 /* HEADER */
 .topo {
     width: 100%;
@@ -22,6 +24,9 @@ body {
     background: linear-gradient(90deg, #a7a6a6, #0f0f0f);
     border-bottom: 1px solid #2d2d2d;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
 }
 
 .logo img {
@@ -36,13 +41,13 @@ body {
     text-decoration: none;
     font-weight: bold;
     letter-spacing: 1px;
-    transition: 0.3s ease;
-    display: inline-block; 
+    transition: .3s ease;
+    display: inline-block;
 }
 
 .menu a:hover {
-    transform: scale(1.15); /* zoom */
-    color: #e7b2ff;   
+    transform: scale(1.15);
+    color: #e7b2ff;
 }
 
 .icon-search {
@@ -50,7 +55,7 @@ body {
     font-size: 20px;
     color: #d38bff;
     cursor: pointer;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .icon-search:hover {
@@ -62,21 +67,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 90px 70px;
+    padding: 120px 60px;
+    margin-top: 40px;
     flex-wrap: wrap;
 }
 
-/* TEXTOS */
+/* TEXTOS HERO */
 .texto {
     max-width: 650px;
 }
 
 h1 {
-    font-size: 55px;
-    color: #d1d1d1;
-    margin-bottom: 25px;
+    font-size: 58px;
     font-weight: 700;
-    letter-spacing: 1px;
+    color: #d9c4ff;
+    margin-bottom: 25px;
     text-shadow: 0 0 10px rgba(159, 73, 255, 0.4);
 }
 
@@ -87,20 +92,14 @@ h1 {
     color: #cccccc;
 }
 
-.descricao {
+.descricao,
+.texto p {
     font-size: 17px;
     line-height: 1.6;
     color: #b5b5b5;
-    margin-bottom: 45px;
-}
-.texto p {
     margin-bottom: 18px;
 }
-h1 {
-    font-size: 58px;
-    font-weight: 700;
-    color: #d9c4ff;
-}
+
 /* BOTÃO */
 .botao {
     display: inline-block;
@@ -109,7 +108,7 @@ h1 {
     border: none;
     border-radius: 50px;
     font-size: 15px;
-    color: white;
+    color: #fff;
     font-weight: bold;
     letter-spacing: 1px;
     box-shadow: 0 0 25px #9a47ff55;
@@ -121,25 +120,91 @@ h1 {
     box-shadow: 0 0 35px #b46cffaa;
 }
 
-
 /* IMAGEM HERO */
-.hero {
-    display: flex;
-    align-items: center; 
-    padding: 120px 60px; 
-}
 .imagem img {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 25px #b041ff);
-    transition: 0.6s ease;
     filter: drop-shadow(0 0 25px #b350ff);
-
+    transition: .6s ease;
 }
 
 .imagem img:hover {
     transform: scale(1.05);
 }
-.hero {
+
+/* SEÇÃO SERVIÇOS */
+.servicos {
+    width: 100%;
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo-servicos {
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
     margin-top: 40px;
+}
+
+.card {
+    width: 330px;
+    min-height: 330px;
+    padding: 30px;
+    background: 90deg, #a34bff, #8b3dff;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+    transition: .35s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0 25px rgba(167, 73, 255, 0.3);
+    filter: drop-shadow(0 0 25px #b350ff);
+}
+
+.card h3 {
+    color: #b041ff;
+    font-size: 22px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.card p {
+    color: #d9d9d9;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* TEXTO SERVIÇOS */
+.texto-servicos {
+    width: 50%;
+    color: white;
+}
+
+.texto-servicos h2 {
+    font-size: 38px;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.texto-servicos p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #ccc;
 }
