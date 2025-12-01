@@ -19,17 +19,20 @@ body {
 /* =========================
    MENU SUPERIOR / HEADER
    ========================= */
-.topo {
+header {
     width: 100%;
     padding: 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, #a7a6a6, #0f0f0f);
-    /* Linha roxa removida */
-    border-bottom: none;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(90deg, #a7a6a6, #0e0e0e);
+    border-bottom: 1px solid #2b2b2b;
+    box-shadow: 0 2px 15px rgba(150, 0, 255, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
+
 
 .logo img {
     height: 70px;
@@ -45,17 +48,17 @@ nav ul {
 
 nav ul li a,
 .menu a {
-    color: #d3c1ff;
+    margin: 0 16px;
+    color: #d38bff;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s ease;
-    letter-spacing: 1px;
+    transition: .3s ease;
+    display: inline-block;
 }
 
 nav ul li a:hover,
 .menu a:hover {
-    color: #b56bff;
-    text-shadow: 0 0 8px #b56bff;
+    color: #e7b2ff;
     transform: scale(1.15);
 }
 

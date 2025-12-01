@@ -45,17 +45,18 @@ nav ul {
 
 nav ul li a,
 .menu a {
-    color: #d3c1ff;
+    margin: 0 16px;
+    color: #d38bff;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s ease;
     letter-spacing: 1px;
+    transition: .3s ease;
+    display: inline-block;
 }
 
 nav ul li a:hover,
 .menu a:hover {
-    color: #b56bff;
-    text-shadow: 0 0 8px #b56bff;
+    color: #e7b2ff;
     transform: scale(1.15);
 }
 

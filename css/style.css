@@ -41,17 +41,17 @@ header {
 
 nav a {
     margin: 0 16px;
-    color: #d7a6ff;
+    color: #d38bff;
     text-decoration: none;
     font-weight: bold;
     letter-spacing: 1px;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    display: inline-block;
 }
 
 nav a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 12px #c66cff;
-    transform: scale(1.12);
+    color: #e7b2ff;
+    transform: scale(1.15);
 }
 
 
@@ -97,7 +97,6 @@ h1 {
 }
 
 
-
 .contato-box {
     background: #1a1a1a;
     color: #eaeaea;
@@ -107,7 +106,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 14px;
-    box-shadow: 0 0 20px #7a2bff55;
+    
     border: 1px solid #b152ff55;
     transition: .3s ease;
 }
@@ -115,7 +114,7 @@ h1 {
 .contato-box:hover {
     transform: translateY(-6px) scale(1.05);
     background: #242424;
-    box-shadow: 0 0 30px #b152ffaa;
+    color: #d38bff;
 }
 
 .contato-box img {
