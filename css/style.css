@@ -51,18 +51,18 @@ body {
 }
 
 .nav ul li a {
+    margin: 0 16px;
+    color: #d38bff;
     text-decoration: none;
-    /* Cor dos links em Roxo Sutil/Escuro */
-    color: #a043ff; 
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    transition: color 0.3s, transform 0.3s;
-    text-shadow: none; 
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: .3s ease;
+    display: inline-block;
+
 }
 
 .nav ul li a:hover {
-    color: #ffffff; 
+    color: #e7b2ff; 
     transform: scale(1.05); /* Zoom sutil */
 }
 
@@ -91,7 +91,7 @@ body {
     /* Título principal "Como funciona?" em BRANCO */
     font-size: 40px;
     font-weight: 700;
-    color: #ffffff; 
+    color: #d9c4ff; 
     margin-bottom: 15px;
 }
 
@@ -174,7 +174,7 @@ body {
 .feature-card h3 {
     font-size: 18px; 
     font-weight: bold;
-    color: #ffffff; 
+    color: #d9c4ff; 
     margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
@@ -185,28 +185,28 @@ body {
     margin-bottom: 20px; 
 }
 
+
+
 /* --- BOTÃO "SAIBA MAIS" --- */
 .saiba-mais-btn {
     display: inline-block;
-    background-color: #bb64ff; 
-    color: #ffffff; 
-    padding: 14px 40px; /* Um pouco maior */
-    border-radius: 5px; 
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
+    padding: 16px 35px;
+    background: linear-gradient(90deg, #a34bff, #8b3dff);
     border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    
-    /* Sombra neon do botão mais fraca */
-    box-shadow: 0 0 10px rgba(187, 100, 255, 0.4); 
+    border-radius: 50px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 25px #9a47ff55;
+    transition: .3s;
+    text-decoration: none;
 }
 
 .saiba-mais-btn:hover {
-    background-color: #a34bff; 
+    
     /* Sombra neon do botão no hover mais fraca */
-    box-shadow: 0 0 20px rgba(187, 100, 255, 0.7);
+    box-shadow: 0 0 35px #b36cffaa;
     transform: scale(1.05); /* Efeito de zoom no hover */
 }
 

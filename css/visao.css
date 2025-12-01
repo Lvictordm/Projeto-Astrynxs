@@ -95,12 +95,13 @@ body {
 }
 
 .nav ul li a {
+    margin: 0 16px;
+    color: #d38bff;
     text-decoration: none;
-    color: #a043ff; 
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    transition: color 0.3s, transform 0.3s;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: .3s ease;
+    display: inline-block;
 }
 
 .nav ul li a:hover {
