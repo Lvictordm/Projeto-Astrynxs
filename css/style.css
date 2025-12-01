@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+/* RESET + FONTE */
+>>>>>>> index
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +10,7 @@
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+<<<<<<< HEAD
 body {
     background: #000;
     color: #e2e2e2;
@@ -13,21 +18,49 @@ body {
 }
 
 header {
+=======
+<<<<<<< HEAD
+/* BODY */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../img/Captura\ de\ tela\ 2025-12-01\ 125805\ \(1\).png") no-repeat center center fixed;
+    background-size: cover;
+=======
+body {
+    background: #000;
+    color: #e2e2e2;
+>>>>>>> origin/serviços
+}
+
+/* HEADER */
+.topo {
+>>>>>>> index
     width: 100%;
     padding: 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     background: linear-gradient(90deg, #a7a6a6, #0e0e0e);
     border-bottom: 1px solid #2b2b2b;
     box-shadow: 0 2px 15px rgba(150, 0, 255, 0.3);
     position: sticky;
     top: 0;
     z-index: 999;
+=======
+    background: linear-gradient(90deg, #a7a6a6, #0f0f0f);
+    border-bottom: 1px solid #2d2d2d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+>>>>>>> index
 }
 
 .logo img {
     height: 70px;
+<<<<<<< HEAD
     filter: drop-shadow(0 0 14px #b152ff);
     transition: .3s;
 }
@@ -200,3 +233,312 @@ footer .copy {
     color: #777;
     font-size: 14px;
 }
+=======
+    filter: drop-shadow(0 0 10px #a043ff);
+}
+
+/* MENU */
+.menu a {
+    margin: 0 16px;
+    color: #d38bff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: .3s ease;
+    display: inline-block;
+}
+
+.menu a:hover {
+    transform: scale(1.15);
+    color: #e7b2ff;
+}
+
+<<<<<<< HEAD
+.icon-search {
+    margin-left: 20px;
+    font-size: 20px;
+    color: #d38bff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.icon-search:hover {
+    transform: scale(1.2);
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 60px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* TEXTOS HERO */
+.texto {
+    max-width: 650px;
+}
+
+h1 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #d9c4ff;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(159, 73, 255, 0.4);
+}
+
+.subtitulo {
+    font-size: 23px;
+    margin-bottom: 28px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.descricao,
+.texto p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #b5b5b5;
+    margin-bottom: 18px;
+}
+
+/* BOTÃO */
+.botao {
+    display: inline-block;
+    padding: 16px 50px;
+    background: linear-gradient(90deg, #a34bff, #8b3dff);
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 25px #9a47ff55;
+    transition: .3s;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px #b46cffaa;
+}
+
+/* IMAGEM HERO */
+.imagem img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 25px #b350ff);
+    transition: .6s ease;
+}
+
+.imagem img:hover {
+    transform: scale(1.05);
+}
+
+/* SEÇÃO SERVIÇOS */
+.servicos {
+    width: 100%;
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo-servicos {
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+=======
+/* CONTEÚDO */
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 150px 24px 80px;
+}
+
+/* INTRO SERVIÇOS */
+.servicos-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.servicos-intro h1 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #d9c4ff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(159, 73, 255, 0.4);
+}
+
+.servicos-intro p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #bfbfbf;
+    line-height: 1.7;
+>>>>>>> origin/serviços
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    width: 330px;
+    min-height: 330px;
+    padding: 30px;
+<<<<<<< HEAD
+    background: 90deg, #a34bff, #8b3dff;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+=======
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+>>>>>>> origin/serviços
+    backdrop-filter: blur(3px);
+    transition: .35s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0 25px rgba(167, 73, 255, 0.3);
+<<<<<<< HEAD
+    filter: drop-shadow(0 0 25px #b350ff);
+}
+
+.card h3 {
+    color: #b041ff;
+    font-size: 22px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.card p {
+    color: #d9d9d9;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* TEXTO SERVIÇOS */
+.texto-servicos {
+    width: 50%;
+    color: white;
+}
+
+.texto-servicos h2 {
+    font-size: 38px;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.texto-servicos p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #ccc;
+}
+=======
+}
+
+/* ÍCONES */
+.icon {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 18px #a043ff);
+    transition: .3s;
+    display: block;
+}
+
+.card:hover .icon {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 25px #bb64ff);
+}
+
+/* TÍTULOS E TEXTOS */
+.card h3 {
+    font-size: 21px;
+    color: #e0caff;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 15px;
+    color: #bfbfbf;
+    line-height: 1.6;
+}
+
+/* BOTÕES ABAIXO DOS CARDS - ALINHADOS */
+.buttons {
+    display: flex;
+    /* justify-content: center;  <-- Removido para permitir alinhamento mais sutil */
+    justify-content: space-around; /* Nova propriedade para distribuir o espaço e alinhar com os cards */
+    gap: 28px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    /* Adicionamos um 'max-width' aqui para restringir o contêiner dos botões 
+       à largura máxima dos três cards acima, forçando o alinhamento central
+       dentro do 'wrap', mas com os botões distribuídos. 
+       A largura de 940px é uma estimativa baseada em três cards de aprox. 280px + 2*28px de gap.
+    */
+    max-width: 940px; 
+    margin-left: auto; /* Centraliza o contêiner 'buttons' */
+    margin-right: auto; /* Centraliza o contêiner 'buttons' */
+}
+
+.botao {
+    display: inline-block;
+    padding: 16px 35px; /* Reduzimos o padding horizontal (de 50px para 35px) */
+    background: linear-gradient(90deg, #a34bff, #8b3dff);
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 25px #9a47ff55;
+    transition: .3s;
+    text-decoration: none;
+    /* min-width: 250px; <-- Removido para deixar o tamanho proporcional ao texto */
+}
+
+.botao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px #b46cffaa;
+}
+
+/* RESPONSIVO */
+@media (max-width: 980px) {
+    /* Em telas menores, se o 'max-width: 940px' for atingido, a centralização 
+       pode precisar ser reforçada, mas mantemos o ajuste de largura.
+    */
+    .buttons { 
+        max-width: 100%; /* Permite ocupar a largura total do 'wrap' novamente */
+        justify-content: center; /* Volta a centralizar os botões */
+    }
+    .botao { min-width: 220px; } /* Mantemos o min-width para telas menores */
+}
+
+@media (max-width: 640px) {
+    .botao {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+>>>>>>> origin/serviços
+>>>>>>> index

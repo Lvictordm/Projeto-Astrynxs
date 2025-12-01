@@ -1,0 +1,33 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CONTAINER CENTRAL */
+.container {
+    text-align: center;
+}
+
+/* IMAGEM PRINCIPAL GIGANTE */
+.imagem-centro {
+    width: 200%;
+    max-width:1110px;
+    filter: drop-shadow(0 0 30px #b350ff);
+    transition: 0.6s ease;
+}
+
+.imagem-centro:hover {
+    transform: scale(1.04);
+}
+
