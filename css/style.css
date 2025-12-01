@@ -1,49 +1,49 @@
-/* Variáveis para cores */
-:root {
-    --color-dark-bg: #100b17; /* Fundo escuro da base.PNG */
-    --color-card-bg: #2a1f3c; /* Fundo dos cards (roxo escuro com transparência) */
-    --color-primary: #59477a; /* Cor primária (roxo) para destaque */
-    --color-text-light: #f4f4f9; /* Texto claro */
-    --color-text-fade: #a7a7a7; /* Texto levemente apagado */
-    --color-blue: #007bff; /* Cor do botão original */
-    --color-icon-bg: #8c76b1; /* Fundo do ícone/Destaque */
-    --color-card-border: #8c76b1; /* Borda ou destaque do card */
-}
-
-/* Reset básico e tipografia */
+/* --- RESET BÁSICO --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif; 
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--color-dark-bg);
-    color: var(--color-text-light);
+    /* --- INCLUSÃO DA IMAGEM DE FUNDO --- */
+    background: url('../img/Imagem\ de\ fundo.png') no-repeat center center fixed;
+    background-size: cover; /* Garante que a imagem cubra todo o fundo */
+    background-color: #000000; /* Cor de fundo principal (preto) */
+    /* ------------------------------------- */
+
+    color: #cccccc; /* Cor do texto suave */
     line-height: 1.6;
+    min-height: 100vh;
 }
 
-/* --- Cabeçalho (Header) --- */
+/* --- CABEÇALHO (HEADER) --- */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-    background-color: transparent; /* Fundo transparente */
-    position: relative;
-    z-index: 10;
+    padding: 20px 5%;
+    /* Gradiente cinza/preto da hotbar */
+    background: linear-gradient(90deg, #333333 0%, #100b17 100%); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    position: fixed; /* Fixado no topo */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
-.logo-text {
-    font-size: 1px;
-    font-weight: 70;
-    color: var(--color-text-light);
+.logo-image {
+    height: 50px; 
+    /* Brilho neon roxo para a logo */
+    filter: drop-shadow(0 0 8px #d900ff); /* Roxo Neon */
 }
 
 .nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 .nav ul li {
@@ -52,179 +52,209 @@ body {
 
 .nav ul li a {
     text-decoration: none;
-    color: var(--color-text-light);
-    font-weight: 400;
-    font-size: 16px;
-    transition: color 0.3s;
+    /* Cor dos links em Roxo Sutil/Escuro */
+    color: #a043ff; 
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s, transform 0.3s;
+    text-shadow: none; 
 }
 
 .nav ul li a:hover {
-    color: var(--color-primary);
+    color: #ffffff; 
+    transform: scale(1.05); /* Zoom sutil */
 }
 
-/* --- Seção "Como funciona?" --- */
+/* --- SEÇÃO "COMO FUNCIONA?" (MAIN CONTENT) --- */
 .how-it-works-section {
     position: relative;
-    padding: 100px 5% 50px;
+    /* Padding alto para compensar o header fixo */
+    padding: 150px 5% 80px; 
     text-align: center;
-    overflow: hidden; /* Para garantir que o background não vaze */
+    overflow: hidden;
+    min-height: 100vh;
 }
 
 .content-container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    z-index: 5; /* Garante que o conteúdo fique acima do shape de fundo */
-}
-
-/* O 'Shape' de fundo curvo e claro (inspirado na imagem 1, mas escurecido) */
-.background-shape {
-    position: absolute;
-    top: -20px; /* Ajustar conforme necessário */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120%; /* Faz o shape ser mais largo que o container */
-    height: 600px; /* Altura do shape */
-    background: radial-gradient(circle at center top, rgba(140, 118, 177, 0.2) 0%, rgba(16, 11, 23, 0) 70%); 
-    border-radius: 0 0 50% 50%; /* Faz a curva para baixo */
-    opacity: 0.5;
-    z-index: 1;
+    z-index: 5;
 }
 
 .text-header {
     margin-bottom: 50px;
-    position: relative;
-    z-index: 2;
-}
-
-.crm-title {
-    color: var(--color-primary);
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
 }
 
 .main-title {
+    /* Título principal "Como funciona?" em BRANCO */
     font-size: 40px;
     font-weight: 700;
+    color: #ffffff; 
     margin-bottom: 15px;
 }
 
 .subtitle {
     font-size: 18px;
     font-weight: 300;
-    color: var(--color-text-fade);
-    max-width: 700px;
+    color: #a7a7a7; /* Cinza mais apagado */
+    max-width: 800px; 
     margin: 0 auto;
 }
 
-/* --- Cards de Recursos (Features Grid) --- */
+/* --- CARDS DE RECURSOS (FEATURES GRID) --- */
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex; 
+    justify-content: center;
     gap: 30px;
     margin-bottom: 60px;
     position: relative;
     z-index: 2;
 }
 
-.feature-card {
-    background-color: var(--color-card-bg); /* Fundo roxo escuro para o card */
-    padding: 30px;
-    border-radius: 15px;
-    text-align: left;
-    min-height: 250px;
+/* NOVO: Container para cada card + botão */
+.feature-item {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border: 1px solid transparent; /* Inicialmente transparente */
-    transition: border-color 0.3s ease;
-
-    /* Efeito de brilho/borda da base.PNG */
-    box-shadow: 0 0 10px rgba(140, 118, 177, 0.3); 
-    border-image-slice: 1;
-    border-image-source: linear-gradient(135deg, var(--color-card-border), var(--color-dark-bg));
+    align-items: center; /* Centraliza o card e o botão */
+    width: 330px; /* Mantém a largura do card original */
 }
 
-.feature-card h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-primary); /* Títulos em roxo para contraste */
-    margin-bottom: 10px;
+.feature-card {
+    /* Fundo do card com opacidade reduzida (0.5 ou 50%) */
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 30px;
+    border-radius: 20px; 
+    text-align: center; 
+    min-height: 350px; /* Reduzido levemente já que o botão saiu */
+    width: 100%; /* Ocupa a largura total do feature-item */
+    display: flex;
+    flex-direction: column;
+    /* REMOVIDO: justify-content: space-between; */
+    align-items: center;
+    
+    /* Borda REMOVIDA */
+    box-shadow: 0 0 10px rgba(187, 100, 255, 0.1); 
+    transition: all 0.3s ease; 
+    margin-bottom: 25px; /* Espaço para o botão */
 }
 
-.feature-card p {
-    font-size: 14px;
-    color: var(--color-text-fade);
-    flex-grow: 1; /* Garante que o texto ocupe o espaço */
+.feature-card:hover {
+    /* Efeito de fundo no hover (mais escuro que o normal, aumentando a opacidade) */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Manter animação de zoom sutil e brilho */
+    transform: scale(1.03); 
+    box-shadow: 0 0 30px rgba(187, 100, 255, 0.5), 0 0 10px rgba(187, 100, 255, 0.3); 
 }
 
 /* Caixa do Ícone */
 .icon-box {
-    background-color: var(--color-icon-bg); /* Cor de fundo do ícone */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    background-color: transparent; 
+    width: 100px; 
+    height: 100px;
+    margin: 0 0 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+    
+    color: #d900ff; /* Roxo Neon */
+    font-size: 55px; /* Ícones grandes */
+    
+    /* Brilho do ícone mais fraco */
+    filter: drop-shadow(0 0 5px #d900ff); 
+    transition: filter 0.3s, transform 0.3s;
 }
 
-.icon-box svg {
-    color: var(--color-dark-bg); /* Cor do ícone (preto/muito escuro) */
-    width: 24px;
-    height: 24px;
+.feature-card:hover .icon-box {
+    /* Brilho do ícone no hover mais fraco */
+    filter: drop-shadow(0 0 10px #d900ff); 
+    transform: scale(1.1); /* Zoom sutil no ícone */
 }
 
-/* Botão "Saiba mais" */
+/* Títulos dos Cards */
+.feature-card h3 {
+    font-size: 18px; 
+    font-weight: bold;
+    color: #ffffff; 
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #cccccc; 
+    margin-bottom: 20px; 
+}
+
+/* --- BOTÃO "SAIBA MAIS" --- */
 .saiba-mais-btn {
     display: inline-block;
-    background-color: var(--color-blue);
-    color: var(--color-text-light);
-    padding: 12px 30px;
-    border-radius: 25px;
+    background-color: #bb64ff; 
+    color: #ffffff; 
+    padding: 14px 40px; /* Um pouco maior */
+    border-radius: 5px; 
     text-decoration: none;
     font-weight: 600;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
-    position: relative;
-    z-index: 2;
+    transition: all 0.3s ease;
+    
+    /* Sombra neon do botão mais fraca */
+    box-shadow: 0 0 10px rgba(187, 100, 255, 0.4); 
+    /* REMOVIDO: margin-top: auto; */
 }
 
 .saiba-mais-btn:hover {
-    background-color: #0056b3;
+    background-color: #a34bff; 
+    /* Sombra neon do botão no hover mais fraca */
+    box-shadow: 0 0 20px rgba(187, 100, 255, 0.7);
+    transform: scale(1.05); /* Efeito de zoom no hover */
 }
 
-/* --- Responsividade (Opcional, mas recomendado) --- */
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 992px) {
     .features-grid {
-        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap; 
+    }
+    /* NOVO: Ajuste para o novo container */
+    .feature-item {
+        width: 45%; 
+        margin-bottom: 30px;
+    }
+    .feature-card {
+        min-height: 300px;
     }
 }
 
 @media (max-width: 768px) {
     .header {
-        flex-direction: column;
+        padding: 15px 20px;
     }
     .nav ul {
+        flex-direction: column;
+        align-items: flex-end;
         margin-top: 10px;
     }
     .nav ul li {
-        margin: 0 15px;
+        margin-left: 0;
+        margin-top: 8px;
+    }
+    .how-it-works-section {
+        padding-top: 120px;
+    }
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* NOVO: Ajuste para o novo container em mobile */
+    .feature-item {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 40px;
     }
     .main-title {
         font-size: 32px;
-    }
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    .feature-card {
-        text-align: center;
-        align-items: center;
     }
 }
