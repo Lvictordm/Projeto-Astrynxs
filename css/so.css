@@ -32,7 +32,7 @@ body {
 }
 
 .logo img {
-    height: 70px;
+    height: 60px;
     filter: drop-shadow(0 0 10px #a043ff);
 }
 
@@ -69,10 +69,11 @@ body {
 
 .ilustracao {
     display: block;
-    margin: 30px auto;
-    max-width: 500px;
+    margin: 0px auto;
+    max-width: 200px;
     width: 100%;
 }
+
 
 /* --- 3 CARDS IGUAIS AO DA IMAGEM (SEM IMAGEM INTERNA) --- */
 .diagonal-container {
@@ -162,4 +163,11 @@ footer {
         width: 100%;
         max-width: 300px;
     }
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #111;
+    color: #bfbfbf;
 }

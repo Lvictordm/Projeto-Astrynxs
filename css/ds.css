@@ -66,7 +66,7 @@ body {
 .ilustracao {
     display: block;
     margin: 30px auto;
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
 }
 
@@ -169,4 +169,13 @@ body {
         width: 100%;
         max-width: 300px;
     }
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #111;
+    color: #bfbfbf;
 }

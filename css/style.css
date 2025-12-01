@@ -192,3 +192,11 @@ body {
         max-width: 500px;
     }
 }
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #111;
+    color: #bfbfbf;
+}
