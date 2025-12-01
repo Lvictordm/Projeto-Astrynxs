@@ -18,14 +18,22 @@ body {
     min-height: 100vh;
 }
 
+/* --- LAYOUT BÁSICO (CONTENT CONTAINER) --- */
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
 /* --- CABEÇALHO (HEADER) --- */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    /* NOVO: Gradiente ajustado para Cinza Escuro (#333) para Preto Puro (#000) */
-    background: linear-gradient(90deg, #a7a6a6 0%, #0f0f0f 100%);
+    /* Gradiente Cinza (#a7a6a6) para Preto (#0f0f0f) - conforme solicitação */
+    background: linear-gradient(90deg, #a7a6a6 0%, #0f0f0f 100%); 
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
     position: fixed; /* Fixado no topo */
     top: 0;
@@ -66,7 +74,7 @@ body {
     transform: scale(1.05); /* Zoom sutil */
 }
 
-/* --- SEÇÃO "COMO FUNCIONA?" (MAIN CONTENT) --- */
+/* --- SEÇÃO RECURSOS (HOW-IT-WORKS-SECTION) --- */
 .how-it-works-section {
     position: relative;
     /* Padding alto para compensar o header fixo */
@@ -74,13 +82,6 @@ body {
     text-align: center;
     overflow: hidden;
     min-height: 100vh;
-}
-
-.content-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 5;
 }
 
 .text-header {
@@ -113,14 +114,7 @@ body {
     z-index: 2;
 }
 
-/* Container para cada card + botão */
-.feature-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza o card e o botão */
-    width: 330px; /* Mantém a largura do card original */
-}
-
+/* O card agora é a tag <article> */
 .feature-card {
     /* Fundo do card com opacidade reduzida (0.5 ou 50%) */
     background-color: rgba(0, 0, 0, 0.5); 
@@ -128,14 +122,15 @@ body {
     border-radius: 20px; 
     text-align: center; 
     min-height: 350px; 
-    width: 100%; 
+    width: 330px; /* Largura definida para a coluna */
     display: flex;
     flex-direction: column;
     align-items: center;
     
     box-shadow: 0 0 10px rgba(187, 100, 255, 0.1); 
     transition: all 0.3s ease; 
-    margin-bottom: 25px; /* Espaço para o botão */
+    /* Margem inferior para espaçamento, se houver outro elemento abaixo (ex: footer) */
+    margin-bottom: 0; 
 }
 
 .feature-card:hover {
@@ -185,42 +180,101 @@ body {
     margin-bottom: 20px; 
 }
 
-/* --- BOTÃO "SAIBA MAIS" --- */
-.saiba-mais-btn {
-    display: inline-block;
-    background-color: #bb64ff; 
-    color: #ffffff; 
-    padding: 14px 40px; /* Um pouco maior */
-    border-radius: 5px; 
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    
-    /* Sombra neon do botão mais fraca */
-    box-shadow: 0 0 10px rgba(187, 100, 255, 0.4); 
+/* --- SEÇÃO DE PROCESSO (FLUXO) --- */
+
+.process-section {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3); /* Um leve contraste com o fundo */
 }
 
-.saiba-mais-btn:hover {
-    background-color: #a34bff; 
-    /* Sombra neon do botão no hover mais fraca */
-    box-shadow: 0 0 20px rgba(187, 100, 255, 0.7);
-    transform: scale(1.05); /* Efeito de zoom no hover */
+.process-steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap; 
+}
+
+.step {
+    flex: 1;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Linha tracejada horizontal para conectar os passos no desktop */
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50px; 
+    right: -15px; 
+    width: 30px; 
+    height: 2px;
+    background: repeating-linear-gradient(to right, #a043ff, #a043ff 5px, transparent 5px, transparent 10px);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+/* Ícone/Número do Passo */
+.step-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    /* Estilo Neon */
+    background-color: #bb64ff; 
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 50%;
+    
+    /* Sombra Neon */
+    box-shadow: 0 0 10px #bb64ff, 0 0 20px rgba(187, 100, 255, 0.5);
+    z-index: 2; 
+}
+
+.step h3 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.step p {
+    font-size: 14px;
+    color: #cccccc;
 }
 
 /* --- RESPONSIVIDADE --- */
+@media (max-width: 1100px) {
+    .process-steps {
+        gap: 50px;
+    }
+    .step {
+        max-width: 45%; 
+    }
+    .step:nth-child(even)::after {
+        /* Remove a linha para o último item de cada linha em telas médias */
+        content: none;
+    }
+}
+
 @media (max-width: 992px) {
     .features-grid {
         flex-wrap: wrap; 
     }
-    /* NOVO: Ajuste para o novo container */
-    .feature-item {
-        width: 45%; 
-        margin-bottom: 30px;
-    }
+    /* O card ocupa 45% da largura do grid em telas médias */
     .feature-card {
+        width: 45%;
         min-height: 300px;
     }
 }
@@ -245,13 +299,38 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    /* NOVO: Ajuste para o novo container em mobile */
-    .feature-item {
+    /* O card ocupa 100% da largura em mobile */
+    .feature-card {
         width: 100%;
         max-width: 350px;
-        margin-bottom: 40px;
+        margin-bottom: 20px; /* Adiciona espaçamento entre cards verticais */
     }
     .main-title {
         font-size: 32px;
+    }
+
+    /* Ajuste Responsivo do Processo (Vertical) */
+    .process-steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    .step {
+        max-width: 300px;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+    }
+    .step:not(:last-child)::after {
+        /* Altera a linha para ser vertical em mobile */
+        content: '';
+        top: 60px;
+        right: 50%;
+        transform: translateX(50%);
+        height: 60px; /* Tamanho da linha vertical */
+        width: 2px;
+        background: repeating-linear-gradient(to bottom, #a043ff, #a043ff 5px, transparent 5px, transparent 10px);
+    }
+    .step:last-child {
+        margin-bottom: 0;
     }
 }
