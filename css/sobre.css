@@ -1,0 +1,241 @@
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif; 
+}
+
+body {
+    background: url('../img/Imagem\ de\ fundo.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000000;
+    color: #cccccc;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* --- CABEÇALHO (HEADER) --- */
+/* --- HEADER --- */
+.header {
+    width: 100%;
+    padding: 20px 60px; /* Reduzi o padding para diminuir a altura da barra */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #a7a6a6, #0e0e0e);
+    border-bottom: 1px solid #2d2d2d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.logo img {
+    height: 70px; /* Logo menor */
+    filter: drop-shadow(0 0 10px #a043ff); /* Mantém o brilho roxo */
+}
+
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li {
+    margin-left: 30px;
+}
+
+.nav ul li a {
+    margin: 0 16px;
+    color: #d38bff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Tornando as letras maiúsculas */
+    transition: .3s ease;
+    display: inline-block;
+}
+
+.nav ul li a:hover {
+    color: #e7b2ff; 
+    transform: scale(1.05);
+}
+
+/* --- SEÇÃO "COMO FUNCIONA?" (MAIN CONTENT) --- */
+.how-it-works-section {
+    position: relative;
+    padding: 150px 5% 80px; 
+    text-align: center;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.text-header {
+    margin-bottom: 50px;
+}
+
+.main-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #d9c4ff;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Tornando o título maiúsculo */
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: #a7a7a7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- CARDS DE RECURSOS (FEATURES GRID) --- */
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 330px;
+}
+
+.feature-card {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 30px;
+    border-radius: 20px; 
+    text-align: center; 
+    min-height: 350px; 
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(187, 100, 255, 0.1); 
+    transition: all 0.3s ease; 
+    margin-bottom: 25px;
+}
+
+.feature-card:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.03); 
+    box-shadow: 0 0 30px rgba(187, 100, 255, 0.5), 0 0 10px rgba(187, 100, 255, 0.3); 
+}
+
+.icon-box {
+    background-color: transparent; 
+    width: 100px; 
+    height: 100px;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d900ff;
+    font-size: 55px;
+    filter: drop-shadow(0 0 5px #d900ff); 
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.feature-card:hover .icon-box {
+    filter: drop-shadow(0 0 10px #d900ff); 
+    transform: scale(1.1);
+}
+
+.feature-card h3 {
+    font-size: 18px; 
+    font-weight: bold;
+    color: #d9c4ff; 
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #cccccc; 
+    margin-bottom: 20px;
+}
+
+/* --- BOTÃO "SAIBA MAIS" --- */
+.saiba-mais-btn {
+    display: inline-block;
+    padding: 16px 35px;
+    background: linear-gradient(90deg, #a34bff, #8b3dff);
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 25px #9a47ff55;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.saiba-mais-btn:hover {
+    box-shadow: 0 0 35px #b36cffaa;
+    transform: scale(1.05);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .features-grid {
+        flex-wrap: wrap; 
+    }
+
+    .feature-item {
+        width: 45%; 
+        margin-bottom: 30px;
+    }
+
+    .feature-card {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px; /* Ajustado o padding para o header em dispositivos móveis */
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 10px;
+    }
+
+    .nav ul li {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    .how-it-works-section {
+        padding-top: 120px;
+    }
+
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 40px;
+    }
+
+    .main-title {
+        font-size: 32px;
+    }
+}
