@@ -1,84 +1,46 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-/* RESET + FONTE */
->>>>>>> index
-=======
-/* Variáveis para cores */
-:root {
-    --color-dark-bg: #100b17; /* Fundo escuro da base.PNG */
-    --color-card-bg: #2a1f3c; /* Fundo dos cards (roxo escuro com transparência) */
-    --color-primary: #59477a; /* Cor primária (roxo) para destaque */
-    --color-text-light: #f4f4f9; /* Texto claro */
-    --color-text-fade: #a7a7a7; /* Texto levemente apagado */
-    --color-blue: #007bff; /* Cor do botão original */
-    --color-icon-bg: #8c76b1; /* Fundo do ícone/Destaque */
-    --color-card-border: #8c76b1; /* Borda ou destaque do card */
-}
-
-/* Reset básico e tipografia */
->>>>>>> origin/sobre
+/* RESET + FONTES */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-<<<<<<< HEAD
 body {
     background: #000;
     color: #e2e2e2;
     overflow-x: hidden;
 }
 
-header {
-=======
-<<<<<<< HEAD
-/* BODY */
-body {
-    margin: 0;
-    padding: 0;
-    background: url("../img/Captura\ de\ tela\ 2025-12-01\ 125805\ \(1\).png") no-repeat center center fixed;
-    background-size: cover;
-=======
-body {
-    margin: 0;
-    padding: 0;
-    background: url("../img/Imagem\ de\ fundo.png") no-repeat center center fixed;
-    background-size: cover;
+/* Variáveis de cores */
+:root {
+    --color-dark-bg: #100b17;
+    --color-card-bg: #2a1f3c;
+    --color-primary: #59477a;
+    --color-text-light: #f4f4f9;
+    --color-text-fade: #a7a7a7;
+    --color-blue: #007bff;
+    --color-icon-bg: #8c76b1;
+    --color-card-border: #8c76b1;
 }
 
 /* HEADER */
-.topo {
->>>>>>> index
+header {
     width: 100%;
     padding: 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD
     background: linear-gradient(90deg, #a7a6a6, #0e0e0e);
     border-bottom: 1px solid #2b2b2b;
-    box-shadow: 0 2px 15px rgba(150, 0, 255, 0.3);
-    position: sticky;
-    top: 0;
-    z-index: 999;
-=======
-    background: linear-gradient(90deg, #a7a6a6, #0f0f0f);
-    border-bottom: 1px solid #2d2d2d;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
->>>>>>> index
 }
 
 .logo img {
     height: 70px;
-<<<<<<< HEAD
     filter: drop-shadow(0 0 14px #b152ff);
     transition: .3s;
 }
@@ -86,7 +48,6 @@ body {
 .logo img:hover {
     transform: scale(1.05);
 }
-
 
 nav a {
     margin: 0 16px;
@@ -103,7 +64,7 @@ nav a:hover {
     transform: scale(1.12);
 }
 
-
+/* TÍTULO */
 h1 {
     text-align: center;
     margin-top: 60px;
@@ -120,171 +81,7 @@ h1 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-.star-center {
-    width: 170px;
-    margin: 40px auto;
-    display: block;
-    filter: drop-shadow(0 0 25px #b041ff);
-    animation: pulse 3s infinite ease-in-out;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
-}
-
-
-.contatos-container {
-    margin-top: 40px;
-    padding: 40px 0;
-    border-top: 3px solid #b152ff;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.contato-box {
-    background: #1a1a1a;
-    color: #eaeaea;
-    width: 260px;
-    padding: 20px;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    box-shadow: 0 0 20px #7a2bff55;
-    border: 1px solid #b152ff55;
-    transition: .3s ease;
-}
-
-.contato-box:hover {
-    transform: translateY(-6px) scale(1.05);
-    background: #242424;
-    box-shadow: 0 0 30px #b152ffaa;
-}
-
-.contato-box img {
-    width: 34px;
-    filter: drop-shadow(0 0 6px #b152ff);
-}
-
-
-.footer-info {
-    text-align: center;
-    margin: 35px 0 60px;
-    color: #d6cfff;
-    font-size: 18px;
-    text-shadow: 0 0 10px #a24bff55;
-}
-
-
-footer {
-    background: #0a0a0a;
-    padding: 50px 60px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-top: 2px solid #a94bff55;
-    box-shadow: 0 -4px 20px rgba(160, 50, 255, 0.2);
-}
-
-footer .col {
-    margin: 10px 0;
-}
-
-footer h3 {
-    color: #d600ff;
-    font-size: 22px;
-    margin-bottom: 15px;
-    text-shadow: 0 0 10px #b152ff;
-}
-
-footer a {
-    color: #ccc;
-    text-decoration: none;
-    display: block;
-    margin: 6px 0;
-    transition: .2s;
-}
-
-footer a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 12px #c66cff;
-}
-
-
-.social img {
-    width: 32px;
-    margin-right: 12px;
-    cursor: pointer;
-    transition: .2s;
-    filter: drop-shadow(0 0 8px #a94bff);
-}
-
-.social img:hover {
-    transform: scale(1.15);
-}
-
-
-.newsletter-input {
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    width: 230px;
-    outline: none;
-    background: #161616;
-    color: #fff;
-    box-shadow: 0 0 12px #b152ff44;
-}
-
-.newsletter-input:focus {
-    box-shadow: 0 0 18px #b152ff;
-}
-
-
-footer .copy {
-    width: 100%;
-    text-align: center;
-    margin-top: 40px;
-    color: #777;
-    font-size: 14px;
-}
-=======
-    filter: drop-shadow(0 0 10px #a043ff);
-}
-
-/* MENU */
-.menu a {
-    margin: 0 16px;
-    color: #d38bff;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: .3s ease;
-    display: inline-block;
-}
-
-.menu a:hover {
-    transform: scale(1.15);
-    color: #e7b2ff;
-}
-
-<<<<<<< HEAD
-.icon-search {
-    margin-left: 20px;
-    font-size: 20px;
-    color: #d38bff;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.icon-search:hover {
-    transform: scale(1.2);
-}
-
-/* HERO SECTION */
+/* SEÇÃO HERO */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -294,7 +91,6 @@ footer .copy {
     flex-wrap: wrap;
 }
 
-/* TEXTOS HERO */
 .texto {
     max-width: 650px;
 }
@@ -342,7 +138,6 @@ h1 {
     box-shadow: 0 0 35px #b46cffaa;
 }
 
-/* IMAGEM HERO */
 .imagem img {
     width: 100%;
     height: auto;
@@ -370,15 +165,8 @@ h1 {
     justify-content: space-between;
     align-items: flex-start;
     gap: 60px;
-=======
-/* CONTEÚDO */
-.wrap {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 150px 24px 80px;
 }
 
-/* INTRO SERVIÇOS */
 .servicos-intro {
     text-align: center;
     margin-bottom: 50px;
@@ -398,7 +186,6 @@ h1 {
     font-size: 18px;
     color: #bfbfbf;
     line-height: 1.7;
->>>>>>> origin/serviços
 }
 
 /* CARDS */
@@ -414,19 +201,11 @@ h1 {
     width: 330px;
     min-height: 330px;
     padding: 30px;
-<<<<<<< HEAD
-    background: 90deg, #a34bff, #8b3dff;
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 14px;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-=======
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 14px;
     text-align: center;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
->>>>>>> origin/serviços
     backdrop-filter: blur(3px);
     transition: .35s;
 }
@@ -434,7 +213,6 @@ h1 {
 .card:hover {
     transform: translateY(-12px);
     box-shadow: 0 0 25px rgba(167, 73, 255, 0.3);
-<<<<<<< HEAD
     filter: drop-shadow(0 0 25px #b350ff);
 }
 
@@ -451,27 +229,6 @@ h1 {
     line-height: 1.6;
 }
 
-/* TEXTO SERVIÇOS */
-.texto-servicos {
-    width: 50%;
-    color: white;
-}
-
-.texto-servicos h2 {
-    font-size: 38px;
-    margin-bottom: 14px;
-    font-weight: 700;
-}
-
-.texto-servicos p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #ccc;
-}
-=======
-}
-
-/* ÍCONES */
 .icon {
     width: 180px;
     height: 180px;
@@ -479,7 +236,6 @@ h1 {
     object-fit: contain;
     filter: drop-shadow(0 0 18px #a043ff);
     transition: .3s;
-    display: block;
 }
 
 .card:hover .icon {
@@ -487,41 +243,21 @@ h1 {
     filter: drop-shadow(0 0 25px #bb64ff);
 }
 
-/* TÍTULOS E TEXTOS */
-.card h3 {
-    font-size: 21px;
-    color: #e0caff;
-    margin-bottom: 12px;
-    font-weight: bold;
-}
-
-.card p {
-    font-size: 15px;
-    color: #bfbfbf;
-    line-height: 1.6;
-}
-
-/* BOTÕES ABAIXO DOS CARDS - ALINHADOS */
+/* BOTÕES ABAIXO DOS CARDS */
 .buttons {
     display: flex;
-    /* justify-content: center;  <-- Removido para permitir alinhamento mais sutil */
-    justify-content: space-around; /* Nova propriedade para distribuir o espaço e alinhar com os cards */
+    justify-content: space-around;
     gap: 28px;
     margin-top: 30px;
     flex-wrap: wrap;
-    /* Adicionamos um 'max-width' aqui para restringir o contêiner dos botões 
-       à largura máxima dos três cards acima, forçando o alinhamento central
-       dentro do 'wrap', mas com os botões distribuídos. 
-       A largura de 940px é uma estimativa baseada em três cards de aprox. 280px + 2*28px de gap.
-    */
-    max-width: 940px; 
-    margin-left: auto; /* Centraliza o contêiner 'buttons' */
-    margin-right: auto; /* Centraliza o contêiner 'buttons' */
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* BOTÃO (geral) */
 .botao {
-    display: inline-block;
-    padding: 16px 35px; /* Reduzimos o padding horizontal (de 50px para 35px) */
+    padding: 16px 35px;
     background: linear-gradient(90deg, #a34bff, #8b3dff);
     border: none;
     border-radius: 50px;
@@ -532,7 +268,6 @@ h1 {
     box-shadow: 0 0 25px #9a47ff55;
     transition: .3s;
     text-decoration: none;
-    /* min-width: 250px; <-- Removido para deixar o tamanho proporcional ao texto */
 }
 
 .botao:hover {
@@ -542,14 +277,13 @@ h1 {
 
 /* RESPONSIVO */
 @media (max-width: 980px) {
-    /* Em telas menores, se o 'max-width: 940px' for atingido, a centralização 
-       pode precisar ser reforçada, mas mantemos o ajuste de largura.
-    */
-    .buttons { 
-        max-width: 100%; /* Permite ocupar a largura total do 'wrap' novamente */
-        justify-content: center; /* Volta a centralizar os botões */
+    .buttons {
+        max-width: 100%;
+        justify-content: center;
     }
-    .botao { min-width: 220px; } /* Mantemos o min-width para telas menores */
+    .botao {
+        min-width: 220px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -559,10 +293,13 @@ h1 {
     }
 }
 
-
+/* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px 0;
-    background: #111;
-    color: #bfbfbf;
+    background: #0a0a0a;
+    padding: 50px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 2px solid #a94bff55;
+    box-shadow
 }
