@@ -7,9 +7,12 @@
 }
 
 body {
-    background: #000;
-    color: #e2e2e2;
+    margin: 0;
+    padding: 0;
+    background: url("../img/Imagem\ de\ fundo.png") no-repeat center center fixed;
+    background-size: cover;
 }
+
 
 /* --- HEADER e MENU (mesmo do principal) --- */
 .topo {
@@ -107,6 +110,8 @@ body {
     color: #bfbfbf;
     line-height: 1.6;
 }
+
+
 
 /* --- BOTÃO CENTRALIZADO --- */
 .botao-voltar-container {
@@ -244,32 +249,17 @@ footer {
 
 .demo-celular h2 {
     font-size: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
     color: #d9c4ff;
     text-shadow: 0 0 8px rgba(159,73,255,0.5);
 }
 
-.dispositivo.celular {
-    width: 200px;
-    height: 400px;
-    background: #222;
-    border-radius: 20px;
-    padding: 4px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    margin: 0 auto;
-}
 
-.dispositivo.celular .tela {
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    border-radius: inherit;
-    overflow: hidden;
-}
+
 
 .dispositivo.celular .tela img {
-    width: 300px;
-    height: 400px;  
+    width: 400px;
+    height: 500px;  
     object-fit: cover;
 }
 
@@ -288,3 +278,10 @@ footer {
     object-fit: contain;
 }
 
+.conteudo p {
+    color: #d9c4ff; 
+    font-size: 19px;
+    line-height: 1.7;
+    margin: 18px 0;
+    text-align: center;
+}
